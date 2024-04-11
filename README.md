@@ -25,15 +25,15 @@ b) If the last byte is read, exit; otherwise, continue checking RX_FIFO not empt
   
    
 Write Request sequence:    
-Write Bytes to an IIC Slave Device Addressed as 0x_ _  
-  
-Place the data at slave device address 0x__:  
-    Check that all FIFOs are empty and that the bus is not busy by reading the SR.  
-    Write 0x___ to the TX_FIFO (set the start bit, the device address, write access).  
-    Write 0x__ to the TX_FIFO (slave address for data).  
-    Write 0x__ to the TX_FIFO (byte 1).  
-    Write 0x__ to the TX_FIFO (byte 2).  
-    Write 0x__ to the TX_FIFO (stop bit, byte x).  
+
+    Write Bytes to an IIC Slave Device Addressed as 0x_ _      
+    Place the data at slave device address 0x__:      
+    Check that all FIFOs are empty and that the bus is not busy by reading the SR.            
+    Write 0x___ to the TX_FIFO (set the start bit, the device address, write access).            
+    Write 0x__ to the TX_FIFO (slave address for data).      
+    Write 0x__ to the TX_FIFO (byte 1).      
+    Write 0x__ to the TX_FIFO (byte 2).       
+    Write 0x__ to the TX_FIFO (stop bit, byte x).      
 
 
 
