@@ -9,10 +9,9 @@ Initialization
     Enable the AXI IIC, remove the TX_FIFO reset, and disable the general call.  
     
 Read Request Sequence:    
-Read Bytes from an IIC Slave Device Addressed as 0x_ _  
 
-First, a write access is necessary to set the slave device address, then a repeated start follows with the read accesses:  
-
+    Read Bytes from an IIC Slave Device Addressed as 0x_ _    
+    First, a write access is necessary to set the slave device address, then a repeated start follows with the read accesses:    
     Check that all FIFOs are empty and that the bus is not busy by reading the Status register.  
     Write 0x_ _ _ to the TX_FIFO (set start bit, device address to 0x__, write access).  
     Write 0x__ to the TX_FIFO (slave address for data).  
