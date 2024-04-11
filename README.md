@@ -40,13 +40,3 @@ Place the data at slave device address 0x__:
 
 
 
-First, a write access is necessary to set the slave device address, then a repeated start follows with the read accesses:
-
-    Check that all FIFOs are empty and that the bus is not busy by reading the Status register.
-    Write 0x_ _ _ to the TX_FIFO (set start bit, device address to 0x__, write access).
-    Write 0x__ to the TX_FIFO (slave address for data).
-    Write 0x___ to the TX_FIFO (set start bit for repeated start, device address 0x_ _, read access).
-    Write 0x___ to the TX_FIFO (set stop bit, four bytes to be received by the AXI IIC).
-    Wait for RX_FIFO not empty.
-a) Read the RX_FIFO byte.
-b) If the last byte is read, exit; otherwise, continue checking RX_FIFO not empty.
