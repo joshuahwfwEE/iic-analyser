@@ -3,10 +3,10 @@ the iic analyser can capture 2 wire sda and scl signal between iic communication
 
 xlinx axi iic:  
 
-Initialization
-    Set the RX_FIFO depth to maximum by setting RX_FIFO_PIRQ = 0x _ _
-    Reset the TX_FIFO with 0x_ _  
-    Enable the AXI IIC, remove the TX_FIFO reset, and disable the general call.  
+Initialization  
+    Set the RX_FIFO depth to maximum by setting RX_FIFO_PIRQ = 0x _ _    
+    Reset the TX_FIFO with 0x_ _      
+    Enable the AXI IIC, remove the TX_FIFO reset, and disable the general call.     
     
 Read Request Sequence:    
 
