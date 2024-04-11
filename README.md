@@ -17,11 +17,11 @@ Read Request Sequence:
     Write 0x__ to the TX_FIFO (slave address for data).  
     Write 0x___ to the TX_FIFO (set start bit for repeated start, device address 0x_ _, read access).  
     Write 0x___ to the TX_FIFO (set stop bit, four bytes to be received by the AXI IIC).  
-    Wait for RX_FIFO not empty.  
+    Wait for RX_FIFO not empty.      
   
   
-a) Read the RX_FIFO byte.  
-b) If the last byte is read, exit; otherwise, continue checking RX_FIFO not empty.  
+    a) Read the RX_FIFO byte.      
+    b) If the last byte is read, exit; otherwise, continue checking RX_FIFO not empty.      
   
    
 Write Request sequence:    
